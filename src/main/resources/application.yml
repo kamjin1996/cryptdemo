@@ -1,0 +1,18 @@
+#数据库加密配置
+dbcrypt:
+  secretkey: 123456789012345678901234
+  enable: true
+
+#数据源配置
+spring:
+  datasource:
+    username: root
+    password: 123
+    url: jdbc:mysql://localhost:3306/mytest?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#mybatis配置
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.kamjin.cryptdemo.entity
+
