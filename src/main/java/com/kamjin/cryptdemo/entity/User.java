@@ -1,8 +1,8 @@
 package com.kamjin.cryptdemo.entity;
 
+import com.github.kamjin1996.mybatis.intercept.crypt.annotation.CryptField;
 import com.kamjin.cryptdemo.base.BaseEntity;
 import lombok.Data;
-import mybatis.intercept.crypt.annotation.CryptField;
 
 /**
  * 用户数据模型
@@ -16,7 +16,8 @@ public class User extends BaseEntity {
 
     private String username;
 
-    @CryptField private String password;
+    @CryptField
+    private String password;
 
     private Integer age;
 }

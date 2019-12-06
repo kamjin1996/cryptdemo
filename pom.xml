@@ -61,6 +61,11 @@
             <version>3.9</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.kamjin1996</groupId>
+            <artifactId>mybatis-intercept-crypt</artifactId>
+            <version>2.0</version>
+        </dependency>
     </dependencies>
 
     <build>
