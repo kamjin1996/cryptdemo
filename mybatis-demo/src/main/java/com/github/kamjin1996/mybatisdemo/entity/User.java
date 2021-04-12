@@ -1,8 +1,7 @@
 package com.github.kamjin1996.mybatisdemo.entity;
 
-import com.github.kamjin1996.mybatis.intercept.crypt.annotation.CryptField;
+import com.kamjin.toolkit.db.crypt.core.annotation.CryptField;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 /**
  * 用户数据模型

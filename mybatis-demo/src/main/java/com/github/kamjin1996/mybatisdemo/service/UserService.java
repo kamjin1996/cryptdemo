@@ -1,6 +1,5 @@
 package com.github.kamjin1996.mybatisdemo.service;
 
-import com.github.kamjin1996.mybatisdemo.base.BaseService;
 import com.github.kamjin1996.mybatisdemo.entity.User;
 
 import java.util.List;
@@ -10,7 +9,7 @@ import java.util.List;
  *
  * @author kamjin1996
  */
-public interface UserService extends BaseService {
+public interface UserService {
 
     List<User> findAll();
 
