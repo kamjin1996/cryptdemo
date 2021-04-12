@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.github.kamjin1996.mybatisplusdemo.mapper.UserMapper">
+    <insert id="insertOne">
+        insert into user (password, username, age)
+        values (#{password}, #{username}, #{age})
+    </insert>
 
-</mapper>
+    <select id="selectListByPasswordAndUsername" resultType="com.github.kamjin1996.mybatisplusdemo.entity.User">
+        select *
+        from user
+        where password = #{password}
+          and username = #{username}
+    </select>
+    <select id="selectAll" resultType="com.github.kamjin1996.mybatisplusdemo.entity.User">
+        select *
+        from user
+    </select></mapper>

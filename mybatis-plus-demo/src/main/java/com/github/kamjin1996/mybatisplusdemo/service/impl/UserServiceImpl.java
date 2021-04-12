@@ -26,4 +26,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public void add(User user) {
         this.save(user);
     }
+
+    @Override
+    public List<User> listByPasswordAndUsername(String password, String username) {
+        return this.baseMapper.selectListByPasswordAndUsername(password,username
+        );
+    }
 }
