@@ -2,6 +2,7 @@
 dbcrypt:
   secretkey: 123456789012345678901234
   enable: true
+  primaryKeyName: id
 
 #数据源配置
 spring:
