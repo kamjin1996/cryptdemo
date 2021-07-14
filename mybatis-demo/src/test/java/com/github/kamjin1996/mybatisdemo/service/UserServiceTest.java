@@ -20,9 +20,9 @@ class UserServiceTest {
     @Test
     public void add() {
         User user = new User();
-        user.setId(1L);
+        user.setId(11L);
         user.setUsername("kam");
-        user.setAge(10);
+        user.setAge(11);
         user.setPassword("123456");
         this.userService.add(user);
     }

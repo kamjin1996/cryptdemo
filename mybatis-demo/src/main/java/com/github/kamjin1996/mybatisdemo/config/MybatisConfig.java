@@ -30,11 +30,6 @@ public class MybatisConfig {
 
     @Bean
     public MybatisCryptInterceptor mybatisCryptInterceptor() {
-        return new MybatisCryptInterceptor();
-    }
-
-    @Bean
-    public DbcryptProperties dbcryptProperties() {
-        return new DbcryptProperties(AesEnum.AES192, getSecretkey(), isEnable(), getPrimaryKeyName());
+        return new MybatisCryptInterceptor(new DbcryptProperties(AesEnum.AES192, getSecretkey(), isEnable(), getPrimaryKeyName()));
     }
 }
