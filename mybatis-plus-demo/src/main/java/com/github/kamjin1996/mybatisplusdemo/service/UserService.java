@@ -17,5 +17,7 @@ public interface UserService extends IService<User> {
 
     void add(User user);
 
+    void addAll(List<User> users);
+
     List<User> listByPasswordAndUsername(String password, String username);
 }

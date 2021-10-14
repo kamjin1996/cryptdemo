@@ -1,5 +1,6 @@
 package com.github.kamjin1996.mybatisplusdemo.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -17,7 +18,7 @@ import lombok.experimental.Accessors;
 @TableName("user")
 public class User {
 
-    @TableId("id")
+    @TableId(value = "id",type = IdType.AUTO)
     public Long id;
 
     @TableField(value = "username")

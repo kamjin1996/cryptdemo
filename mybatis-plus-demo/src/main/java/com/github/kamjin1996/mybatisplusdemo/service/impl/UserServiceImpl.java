@@ -28,8 +28,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
+    public void addAll(List<User> users) {
+        this.saveBatch(users);
+    }
+
+    @Override
     public List<User> listByPasswordAndUsername(String password, String username) {
-        return this.baseMapper.selectListByPasswordAndUsername(password,username
+        return this.baseMapper.selectListByPasswordAndUsername(password, username
         );
     }
 }
