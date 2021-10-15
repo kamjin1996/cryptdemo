@@ -33,6 +33,6 @@ public class MybatisConfig {
 
     @Bean
     public MybatisCryptInterceptor mybatisCryptInterceptor() {
-        return new MybatisCryptInterceptor(new DbcryptProperties(aes, getSecretkey(), isEnable(), getPrimaryKeyName()));
+        return new MybatisCryptInterceptor(new DbcryptProperties(aes, secretkey,enable, primaryKeyName));
     }
 }
