@@ -17,10 +17,11 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.3.0</version>
         </dependency>
+
         <dependency>
             <groupId>com.github.kamjin1996</groupId>
-            <artifactId>toolkit-db-crypt-mybatis-plus</artifactId>
-            <version>2.2.3.RELEASE</version>
+            <artifactId>kamjin-db-crypt-mybatis-plus-boot-starter</artifactId>
+            <version>2.3.0</version>
         </dependency>
 
     </dependencies>
