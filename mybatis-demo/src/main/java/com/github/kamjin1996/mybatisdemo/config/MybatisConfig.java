@@ -25,7 +25,7 @@ public class MybatisConfig {
     @Value("${kamjin.dbcrypt.enable}")
     private boolean enable;
 
-    @Value("${kamjin.dbcrypt.primaryKeyName}")
+    @Value("${kamjin.dbcrypt.primary-key-name}")
     private String primaryKeyName;
 
     @Value("${kamjin.dbcrypt.aes}")
