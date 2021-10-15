@@ -28,8 +28,11 @@ public class MybatisConfig {
     @Value("${kamjin.dbcrypt.primaryKeyName}")
     private String primaryKeyName;
 
+    @Value("${kamjin.dbcrypt.aes}")
+    private AesEnum aes;
+
     @Bean
     public MybatisCryptInterceptor mybatisCryptInterceptor() {
-        return new MybatisCryptInterceptor(new DbcryptProperties(AesEnum.AES192, getSecretkey(), isEnable(), getPrimaryKeyName()));
+        return new MybatisCryptInterceptor(new DbcryptProperties(aes, getSecretkey(), isEnable(), getPrimaryKeyName()));
     }
 }

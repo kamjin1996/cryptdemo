@@ -3,7 +3,7 @@ kamjin:
   dbcrypt:
     secretkey: 123456789012345678901234
     enable: true
-    primaryKeyName: id
+    primary-key-name: id
     aes: AES192
 
 #数据源配置
