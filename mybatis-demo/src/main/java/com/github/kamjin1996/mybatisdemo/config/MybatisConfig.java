@@ -19,13 +19,13 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class MybatisConfig {
 
-    @Value("${dbcrypt.secretkey}")
+    @Value("${kamjin.dbcrypt.secretkey}")
     private String secretkey;
 
-    @Value("${dbcrypt.enable}")
+    @Value("${kamjin.dbcrypt.enable}")
     private boolean enable;
 
-    @Value("${dbcrypt.primaryKeyName}")
+    @Value("${kamjin.dbcrypt.primaryKeyName}")
     private String primaryKeyName;
 
     @Bean

@@ -1,8 +1,10 @@
 #数据库加密配置
-dbcrypt:
-  secretkey: 123456789012345678901234
-  enable: true
-  primaryKeyName: id
+kamjin:
+  dbcrypt:
+    secretkey: 123456789012345678901234
+    enable: true
+    primaryKeyName: id
+    aes: AES192
 
 #数据源配置
 spring:
