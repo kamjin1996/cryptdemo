@@ -4,6 +4,7 @@ dbcrypt:
   enable: true
   primaryKeyName: id
 
+
 #数据源配置
 spring:
   datasource:
