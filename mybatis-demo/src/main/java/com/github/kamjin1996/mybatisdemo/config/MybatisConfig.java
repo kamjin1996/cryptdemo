@@ -2,6 +2,9 @@ package com.github.kamjin1996.mybatisdemo.config;
 
 import com.kamjin.toolkit.db.crypt.core.bean.DbcryptProperties;
 import com.kamjin.toolkit.db.crypt.core.enums.AesEnum;
+import com.kamjin.toolkit.db.crypt.core.executor.CryptExecutorFactory;
+import com.kamjin.toolkit.db.crypt.core.executor.DefaultCryptExecutor;
+import com.kamjin.toolkit.db.crypt.core.handler.DefaultAESCodecFieldValueHandler;
 import com.kamjin.toolkit.db.crypt.mybatis.interceptor.MybatisCryptInterceptor;
 import lombok.Data;
 import org.mybatis.spring.annotation.MapperScan;
@@ -33,6 +36,8 @@ public class MybatisConfig {
 
     @Bean
     public MybatisCryptInterceptor mybatisCryptInterceptor() {
-        return new MybatisCryptInterceptor(new DbcryptProperties(aes, secretkey,enable, primaryKeyName));
+        DbcryptProperties properties = new DbcryptProperties(aes, secretkey, enable, primaryKeyName);
+        CryptExecutorFactory.registry(new DefaultCryptExecutor(new DefaultAESCodecFieldValueHandler(properties)));
+        return new MybatisCryptInterceptor(properties);
     }
 }

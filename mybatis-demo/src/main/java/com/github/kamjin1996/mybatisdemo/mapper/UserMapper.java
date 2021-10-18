@@ -1,6 +1,7 @@
 package com.github.kamjin1996.mybatisdemo.mapper;
 
 import com.github.kamjin1996.mybatisdemo.entity.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
  *
  * @author kamjin1996
  */
+@Repository
 public interface UserMapper {
 
     List<User> selectAll();
