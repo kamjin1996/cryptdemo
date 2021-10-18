@@ -28,4 +28,9 @@ public class UserServiceImpl implements UserService {
     public void add(User user) {
         this.userMapper.insert(user);
     }
+
+    @Override
+    public User findByPassword(String password) {
+        return this.userMapper.selectOneByPassword(password);
+    }
 }

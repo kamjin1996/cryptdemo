@@ -1,10 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.github.kamjin1996.mybatisdemo.mapper.UserMapper">
     <insert id="insert">
-        insert into user(username,password,age) values (#{username},#{password},#{age});
+        insert into user(username, password, age)
+        values (#{username}, #{password}, #{age});
     </insert>
     <select id="selectAll" resultType="com.github.kamjin1996.mybatisdemo.entity.User">
-        select * from user;
+        select *
+        from user;
+    </select>
+    <select id="selectOneByPassword" resultType="com.github.kamjin1996.mybatisdemo.entity.User">
+        select *
+        from user
+        where password = #{password}
+        limit 1
     </select>
 </mapper>

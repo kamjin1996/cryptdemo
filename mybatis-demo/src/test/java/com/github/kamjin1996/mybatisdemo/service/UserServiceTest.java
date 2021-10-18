@@ -10,7 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class UserServiceTest {
 
-    @Autowired UserService userService;
+    @Autowired
+    UserService userService;
+
+    @Test
+    public void findByPassword() {
+        System.out.println(this.userService.findByPassword("123456"));
+    }
 
     @Test
     public void listAll() {
@@ -18,13 +24,16 @@ class UserServiceTest {
     }
 
     @Test
-    public void add() {
-        User user = new User();
-        user.setId(11L);
-        user.setUsername("kam");
-        user.setAge(11);
-        user.setPassword("123456");
-        this.userService.add(user);
+    public void batchAdd() {
+        for (int i = 0; i < 5; i++) {
+            User user = new User();
+            user.setId((long) i);
+            user.setUsername("kam" + i);
+            user.setAge(11 + i);
+            user.setPassword("123456");
+            this.userService.add(user);
+        }
+
     }
 
 }
